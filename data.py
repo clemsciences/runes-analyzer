@@ -12,6 +12,7 @@ from utils import AutoName
 
 
 POINT = "᛫"
+SEMI_COLUMN = "\u16EC"
 
 
 class RunicAlphabetName(AutoName):
@@ -140,9 +141,19 @@ class Transcriber:
         for c in rune_sentence:
             if c in runic_alphabet:
                 res.append(d_form_transcription[c])
+            elif c in "()":
+                res.append(c)
             else:
                 res.append(POINT)
         return "".join(res)
+
+
+# http://christerhamp.se/runor/gamla/dk/dksjy10.html
+# ᚠ ᚢ ᚦ ᚭ ᚱ ᚴ ᚼ ᚾ ᛁ ᛅ ᛋ ᛏ ᛒ ᛖ ᛘ ᛚ ᛦ
+# \u16D5 \u16D6 \u16D7 \u16D8 \u16D9 \u16DA \u16DB \u16F3
+# jelling_stone_1 = "ᚴ ᚢ ᚱ ᛘ ᛦ ᛬ ᚴ ᚢ ᚾ ᚢ ᚴ ᛦ ᛬ ᚴ ᛅ ᚱ ᚦ ᛁ ᛬ ᚴ ᚢ ᛒ ᛚ ᛬ ᚦ ᚢ ᛋ ᛁ ᛬ ᛅ ᚠ ᛏ ᛬ "
+# https://fr.wikipedia.org/wiki/Petite_pierre_de_Jelling
+little_jelling_stone = "᛬ᚴᚢᚱᛘᛦ᛬ᚴᚢᚾᚢᚴᛦ᛬ᚴ(ᛅᚱ)ᚦᛁ᛬ᚴᚢᛒᛚ᛬ᚦᚢᛋᛁ᛬ᛅ(ᚠᛏ)᛬ᚦᚢᚱᚢᛁ᛬ᚴᚢᚾᚢ᛬ᛋᛁᚾᛅ᛬ᛏᛅᚾᛘᛅᚱᚴᛅᛦ᛬ᛒᚢᛏ᛬"
 
 
 if __name__ == "__main__":
@@ -154,3 +165,5 @@ if __name__ == "__main__":
     inscription = "ᚦᛁᛅᚴᚾ᛫ᛅᚢᚴ᛫ᚴᚢᚾᛅᚱ᛫ᚱᛅᛁᛋᛏᚢ᛫ᛋᛏᛅᛁᚾᛅ ᛅᚠᛏᛁᛦ᛫ᚢᛅᚱ᛫ᛒᚱᚢᚦᚢᚱ᛫ᛋᛁᚾ"
     print(inscription)
     print(Transcriber.transcribe(inscription, YOUNGER_FUTHARK))
+    print(little_jelling_stone)
+    print(Transcriber.transcribe(little_jelling_stone, YOUNGER_FUTHARK))
