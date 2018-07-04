@@ -5,6 +5,9 @@ Sources:
 Some mistakes may be remaining
 
 Unicode: 16A0–16FF
+Swedish runic inscriptions
+http://runes.verbix.com/index.html
+http://runes.verbix.com/vikingage/Uppland.html
 
 """
 from enum import auto
@@ -154,8 +157,20 @@ class Transcriber:
 # jelling_stone_1 = "ᚴ ᚢ ᚱ ᛘ ᛦ ᛬ ᚴ ᚢ ᚾ ᚢ ᚴ ᛦ ᛬ ᚴ ᛅ ᚱ ᚦ ᛁ ᛬ ᚴ ᚢ ᛒ ᛚ ᛬ ᚦ ᚢ ᛋ ᛁ ᛬ ᛅ ᚠ ᛏ ᛬ "
 # https://fr.wikipedia.org/wiki/Petite_pierre_de_Jelling
 little_jelling_stone = "᛬ᚴᚢᚱᛘᛦ᛬ᚴᚢᚾᚢᚴᛦ᛬ᚴ(ᛅᚱ)ᚦᛁ᛬ᚴᚢᛒᛚ᛬ᚦᚢᛋᛁ᛬ᛅ(ᚠᛏ)᛬ᚦᚢᚱᚢᛁ᛬ᚴᚢᚾᚢ᛬ᛋᛁᚾᛅ᛬ᛏᛅᚾᛘᛅᚱᚴᛅᛦ᛬ᛒᚢᛏ᛬"
+big_jelling_stone = "ᚼᛅᚱᛅᛚᛏᚱ᛬ᚴᚢᚾᚢᚴᛦ᛬ᛒᛅᚦ᛬ᚴᛅᚢᚱᚢᛅ ᚴᚢᛒᛚ᛬ᚦᛅᚢᛋᛁ᛬ᛅᚠᛏ᛬ᚴᚢᚱᛘ ᚠᛅᚦᚢᚱ ᛋᛁᚾ ᛅᚢᚴ ᛅᚠᛏ᛬ᚦᚭᚢᚱᚢᛁ᛬ᛘᚢᚦᚢᚱ᛬ᛋᛁᚾᛅ᛬ᛋᛅ " \
+                    "ᚼᛅᚱᛅᛚᛏᚱ(᛬)ᛁᛅᛋ᛬ᛋᚭᛦ᛫ᚢᛅᚾ᛫ᛏᛅᚾᛘᛅᚢᚱᚴ\nᛅᛚᛅ᛫ᛅᚢᚴ᛫ᚾᚢᚱᚢᛁᚴ\n᛫ᛅᚢᚴ᛫ᛏ(ᛅ)ᚾᛁ(᛫ᚴᛅᚱᚦᛁ᛫)ᚴᚱᛁᛋᛏᚾᚭ"
+# ᚠ ᚢ ᚦ ᚭ ᚱ ᚴ ᚼ ᚾ ᛁ ᛅ ᛋ ᛏ ᛒ ᛖ ᛘ ᛚ ᛦ
+ramsund_runestone = "ᛋᛁᚱᚦ᛬ᚴᛁᛅᚱᚦᛁ᛬ᛒᚢᚦ᛬ᚦᚭᛋᛁ᛬ᛘᚢᚦᛁᛦ᛬ᛅᛚᚱᛁᚴᛋ᛬ᛏᚢᛏᛁᛦ᛬ᚢᚱᛘᛋ᛬ᚠᚢᚱ᛬ᛋᛅᛚᚢ᛬ᚼᛅᛚᚢ᛬ᚼᚢᛚᛘᚴᛁᚱᛋ᛬ᚠᛅᚦᚢᚱ᛬ᛋᚢᚴᚱᚢᚦᛅᚱ᛬ᛒᚢᛅᛏᛅ᛬ᛋᛁᛋ"
 
+# The Ed (Boulder) Inscription from Uppland, Sweden
+# http://runes.verbix.com/vikingage/Uppland.html
+ed_inscription = "ᚱᛅᚼᚾᚢᛅᛚᛏᚱ ᛫ ᛚᛁᛏ ᛫ ᚱᛁᛋᛏᛅ ᛫ ᚱᚢᚾᛅᚱ ᛫ ᚽᚡᛦ ᛫ ᚡᛅᛋᛏᚢᛁ ᛫ ᛘᚬᚦᚢᚱ ᛫ ᛋᛁᚾᛅ ᛫ ᚬᚾᚽᛘᛋ ᛫ ᛏᚬᛏᛦ ᛫ ᛏᚬ ᛁ ᛫ ᛅᛁᚦᛁ ᛫ ᚴᚢᚦ ᚼᛁᛅᛚᛒᛁ ᛫ ᛅᚾᛏ ᛫ ᚼᚽᚾᛅ ᛫ " \
+                 "§B ᚱᚢᚾᛅ ᛫ ᚱᛁᛋᛏᛅ ᛫ ᛚᛁᛏ ᛫ ᚱᛅᚼᚾᚢᛅᛚᛏᚱ ᛫ ᚼᚢᛅᚱ ᛅ × ᚵᚱᛁᚴᛚᛅᚾᛏᛁ ᛫ ᚢᛅᛋ ᛫ ᛚᛁᛋ ᛫ ᚡᚬᚱᚢᚾᚴᛁ ᛫"
 
+# https://en.wikipedia.org/wiki/Uppland_Runic_Inscription_448
+u448 = "ᚴᚢᛚ᛫ᛅᚢᚴ᛫ᛒᛁᚢᚱᚾ᛫ᛚᛁᛏᚢ᛫ᚱᛅᛁᛋᛅ᛫ᛋᛏᛅᛁᚾ᛫ᛂᚠᛏᛁᛦ᛫ᚦᚢᚱᛋᛏᛅᛁᚾ᛫ᚠᛅᚦᚢᚱ"
+# https://en.wikipedia.org/wiki/Uppland_Runic_Inscription_92
+u92 = "ᚴᚾᚢᛏᚱ ' ᛁ ᚢᛁᚴ'ᚼᚢᛋᚢᛘ ' ᛚᛁᛏ ' ᛋᛏᛅᛁᚾ ' ᚱᛁᛏᛅ ' ᚢᚴ ' ᛒᚱᚬ ' ᚴᛁᚱᛅ ᛫ ᛁᚡᛏᛁᛦ ' ᚡᛅᚦᚢᚱ ᚢᚴ ᛫ ᛘᚬᚦᚬᚱ ᛫ ᚢᚴ ᛫ ᛒᚱᚤᚦᚱ ᛫ ᛋᛁᚾᛅ ᛫ ᚢᚴ ᛫ ᛋᚢᛋᛏᚢᚱ"
 if __name__ == "__main__":
     print(" ".join(Rune.display_runes(ELDER_FUTHARK)))
     print(" ".join(Rune.display_runes(YOUNGER_FUTHARK)))
@@ -167,3 +182,7 @@ if __name__ == "__main__":
     print(Transcriber.transcribe(inscription, YOUNGER_FUTHARK))
     print(little_jelling_stone)
     print(Transcriber.transcribe(little_jelling_stone, YOUNGER_FUTHARK))
+    print(big_jelling_stone)
+    print(Transcriber.transcribe(big_jelling_stone, YOUNGER_FUTHARK))
+    print(ramsund_runestone)
+    print(Transcriber.transcribe(ramsund_runestone, YOUNGER_FUTHARK))
