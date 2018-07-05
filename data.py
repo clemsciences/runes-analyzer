@@ -2,7 +2,6 @@
 Sources:
 - Viking Language 1 by Jessie L. Byock 2013
 
-Some mistakes may be remaining
 
 Unicode: 16A0–16FF
 Swedish runic inscriptions
@@ -10,49 +9,9 @@ http://runes.verbix.com/index.html
 http://runes.verbix.com/vikingage/Uppland.html
 
 """
-from enum import auto
-from utils import AutoName
+from runes import RunicAlphabetName, Rune, Transcriber
 
 
-POINT = "᛫"
-SEMI_COLUMN = "\u16EC"
-
-
-class RunicAlphabetName(AutoName):
-    elder_futhark = auto()
-    younger_futhark = auto()
-    short_twig_younger_futhark = auto()
-
-
-class Rune:
-    def __init__(self, runic_alphabet: RunicAlphabetName, form: str, sound: str, transcription: str, name: str):
-        self.runic_alphabet = runic_alphabet
-        self.form = form
-        self.sound = sound
-        self.transcription = transcription
-        self.name = name
-
-    @staticmethod
-    def display_runes(runic_alphabet: list):
-        return [rune.form for rune in runic_alphabet]
-
-    @staticmethod
-    def from_form_to_transcription(form: str, runic_alphabet: list):
-        d_form_transcription = {rune.form: rune.transcription for rune in runic_alphabet}
-        return d_form_transcription[form]
-
-    def __repr__(self):
-        return self.form
-
-    def __str__(self):
-        return self.form
-
-    def __eq__(self, other):
-        return self.form == other
-
-
-# There are probably some mistakes
-# Precisions are expected
 # ᚠ ᚢ ᚦ ᚨ ᚲ ᚱ ᚷ ᚹ ᚼ ᚾ ᛁ ᛃ ᛇ ᛈ ᛉ ᛊ ᛏ ᛒ ᛖ ᛗ ᛚ ᛜ ᛟ ᛞ
 ELDER_FUTHARK = [
     Rune(RunicAlphabetName.elder_futhark, "\u16A0", "f", "f", "fehu"),
@@ -127,28 +86,6 @@ SHORT_TWIG_YOUNGER_FUTHARK = [
     Rune(RunicAlphabetName.short_twig_younger_futhark, "\u16DA", "l", "l", "laguz"),
     Rune(RunicAlphabetName.short_twig_younger_futhark, "\u16E7", "r", "R", "algiz"),
 ]
-
-
-class Transcriber:
-    def __init__(self):
-        pass
-
-    @staticmethod
-    def from_form_to_transcription(runic_alphabet: list):
-        return {rune.form: rune.transcription for rune in runic_alphabet}
-
-    @staticmethod
-    def transcribe(rune_sentence: str, runic_alphabet: list):
-        res = []
-        d_form_transcription = Transcriber.from_form_to_transcription(runic_alphabet)
-        for c in rune_sentence:
-            if c in runic_alphabet:
-                res.append(d_form_transcription[c])
-            elif c in "()":
-                res.append(c)
-            else:
-                res.append(POINT)
-        return "".join(res)
 
 
 # http://christerhamp.se/runor/gamla/dk/dksjy10.html

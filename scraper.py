@@ -32,4 +32,9 @@ for link in links:
 with open("sweden_runes.json", "w") as f:
     json.dump(runes, f)
 
+with open("sweden_runes.json", "r") as f:
+    loaded_runes = json.load(f)
+
+print(loaded_runes.keys())
+
 
