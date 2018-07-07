@@ -4,7 +4,7 @@
 
 
 from enum import auto
-from utils import AutoName
+from runesanalyzer.utils import AutoName
 
 
 __author__ = ["Clément Besnier <clemsciences@aol.com>", ]

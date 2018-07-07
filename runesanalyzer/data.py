@@ -9,7 +9,7 @@ http://runes.verbix.com/index.html
 http://runes.verbix.com/vikingage/Uppland.html
 
 """
-from runes import RunicAlphabetName, Rune, Transcriber
+from runesanalyzer.runes import RunicAlphabetName, Rune, Transcriber
 
 
 # ᚠ ᚢ ᚦ ᚨ ᚲ ᚱ ᚷ ᚹ ᚼ ᚾ ᛁ ᛃ ᛇ ᛈ ᛉ ᛊ ᛏ ᛒ ᛖ ᛗ ᛚ ᛜ ᛟ ᛞ
