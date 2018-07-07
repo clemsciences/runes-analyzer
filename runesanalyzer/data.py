@@ -9,6 +9,7 @@ http://runes.verbix.com/index.html
 http://runes.verbix.com/vikingage/Uppland.html
 
 """
+import json
 from runesanalyzer.runes import RunicAlphabetName, Rune, Transcriber
 
 
@@ -108,6 +109,16 @@ ed_inscription = "ᚱᛅᚼᚾᚢᛅᛚᛏᚱ ᛫ ᛚᛁᛏ ᛫ ᚱᛁᛋᛏᛅ 
 u448 = "ᚴᚢᛚ᛫ᛅᚢᚴ᛫ᛒᛁᚢᚱᚾ᛫ᛚᛁᛏᚢ᛫ᚱᛅᛁᛋᛅ᛫ᛋᛏᛅᛁᚾ᛫ᛂᚠᛏᛁᛦ᛫ᚦᚢᚱᛋᛏᛅᛁᚾ᛫ᚠᛅᚦᚢᚱ"
 # https://en.wikipedia.org/wiki/Uppland_Runic_Inscription_92
 u92 = "ᚴᚾᚢᛏᚱ ' ᛁ ᚢᛁᚴ'ᚼᚢᛋᚢᛘ ' ᛚᛁᛏ ' ᛋᛏᛅᛁᚾ ' ᚱᛁᛏᛅ ' ᚢᚴ ' ᛒᚱᚬ ' ᚴᛁᚱᛅ ᛫ ᛁᚡᛏᛁᛦ ' ᚡᛅᚦᚢᚱ ᚢᚴ ᛫ ᛘᚬᚦᚬᚱ ᛫ ᚢᚴ ᛫ ᛒᚱᚤᚦᚱ ᛫ ᛋᛁᚾᛅ ᛫ ᚢᚴ ᛫ ᛋᚢᛋᛏᚢᚱ"
+
+
+sweden_runic_inscription_filename = "sweden_runes.json"
+
+
+def read_sweden_runes():
+    with open(sweden_runic_inscription_filename, "r") as f:
+        return json.load(f)
+
+
 if __name__ == "__main__":
     print(" ".join(Rune.display_runes(ELDER_FUTHARK)))
     print(" ".join(Rune.display_runes(YOUNGER_FUTHARK)))

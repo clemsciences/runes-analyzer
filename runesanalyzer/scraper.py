@@ -2,6 +2,8 @@ import time
 import json
 from lxml import html
 import requests
+
+from runesanalyzer.data import sweden_runic_inscription_filename
 # site = "http://christerhamp.se/runor/gamla/index.html"
 # extract all links in the web page which starts with "http://christerhamp.se/runor/gamla/"
 

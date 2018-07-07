@@ -1,7 +1,7 @@
 
 
 import unittest
-import runesanalyzer.data
+from runesanalyzer import data
 
 __author__ = ["Clément Besnier <clemsciences@aol.com>"]
 
