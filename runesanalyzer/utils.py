@@ -1,6 +1,11 @@
+"""
 
+"""
 
 from enum import Enum
+
+
+__author__ = ["Clément Besnier <clemsciences@aol.com>", ]
 
 
 class AutoName(Enum):

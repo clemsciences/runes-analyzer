@@ -1,19 +1,19 @@
+"""
+
+"""
+
 import time
 import json
 from lxml import html
 import requests
 
 from runesanalyzer.data import sweden_runic_inscription_filename
-# site = "http://christerhamp.se/runor/gamla/index.html"
-# extract all links in the web page which starts with "http://christerhamp.se/runor/gamla/"
 
-# extract the transliterated inscriptions : p[class="trans"]
-# extract the region of the inscription
-# ----------------------------------------------------------
-site = "http://runes.verbix.com/index.html"
+__author__ = ["Clément Besnier <clemsciences@aol.com>", ]
 
 
 def retrieve_sweden_runic_inscription():
+    site = "http://runes.verbix.com/index.html"
     rrunes = requests.get(site)
     tree = html.fromstring(rrunes.text)
     links = [i.get("href") for i in tree.xpath("//a") if "vikingage" in i.get("href")]
@@ -36,3 +36,6 @@ def retrieve_sweden_runic_inscription():
     print(loaded_runes.keys())
 
 
+if __name__ == "__main__":
+    retrieve_sweden_runic_inscription()
+    sweden_runic_inscription_filename()

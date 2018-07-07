@@ -12,6 +12,8 @@ http://runes.verbix.com/vikingage/Uppland.html
 import json
 from runesanalyzer.runes import RunicAlphabetName, Rune, Transcriber
 
+__author__ = ["Clément Besnier <clemsciences@aol.com>", ]
+
 
 # ᚠ ᚢ ᚦ ᚨ ᚲ ᚱ ᚷ ᚹ ᚼ ᚾ ᛁ ᛃ ᛇ ᛈ ᛉ ᛊ ᛏ ᛒ ᛖ ᛗ ᛚ ᛜ ᛟ ᛞ
 ELDER_FUTHARK = [
@@ -89,26 +91,26 @@ SHORT_TWIG_YOUNGER_FUTHARK = [
 ]
 
 
-# http://christerhamp.se/runor/gamla/dk/dksjy10.html
-# ᚠ ᚢ ᚦ ᚭ ᚱ ᚴ ᚼ ᚾ ᛁ ᛅ ᛋ ᛏ ᛒ ᛖ ᛘ ᛚ ᛦ
-# \u16D5 \u16D6 \u16D7 \u16D8 \u16D9 \u16DA \u16DB \u16F3
-# jelling_stone_1 = "ᚴ ᚢ ᚱ ᛘ ᛦ ᛬ ᚴ ᚢ ᚾ ᚢ ᚴ ᛦ ᛬ ᚴ ᛅ ᚱ ᚦ ᛁ ᛬ ᚴ ᚢ ᛒ ᛚ ᛬ ᚦ ᚢ ᛋ ᛁ ᛬ ᛅ ᚠ ᛏ ᛬ "
 # https://fr.wikipedia.org/wiki/Petite_pierre_de_Jelling
 little_jelling_stone = "᛬ᚴᚢᚱᛘᛦ᛬ᚴᚢᚾᚢᚴᛦ᛬ᚴ(ᛅᚱ)ᚦᛁ᛬ᚴᚢᛒᛚ᛬ᚦᚢᛋᛁ᛬ᛅ(ᚠᛏ)᛬ᚦᚢᚱᚢᛁ᛬ᚴᚢᚾᚢ᛬ᛋᛁᚾᛅ᛬ᛏᛅᚾᛘᛅᚱᚴᛅᛦ᛬ᛒᚢᛏ᛬"
 big_jelling_stone = "ᚼᛅᚱᛅᛚᛏᚱ᛬ᚴᚢᚾᚢᚴᛦ᛬ᛒᛅᚦ᛬ᚴᛅᚢᚱᚢᛅ ᚴᚢᛒᛚ᛬ᚦᛅᚢᛋᛁ᛬ᛅᚠᛏ᛬ᚴᚢᚱᛘ ᚠᛅᚦᚢᚱ ᛋᛁᚾ ᛅᚢᚴ ᛅᚠᛏ᛬ᚦᚭᚢᚱᚢᛁ᛬ᛘᚢᚦᚢᚱ᛬ᛋᛁᚾᛅ᛬ᛋᛅ " \
                     "ᚼᛅᚱᛅᛚᛏᚱ(᛬)ᛁᛅᛋ᛬ᛋᚭᛦ᛫ᚢᛅᚾ᛫ᛏᛅᚾᛘᛅᚢᚱᚴ\nᛅᛚᛅ᛫ᛅᚢᚴ᛫ᚾᚢᚱᚢᛁᚴ\n᛫ᛅᚢᚴ᛫ᛏ(ᛅ)ᚾᛁ(᛫ᚴᛅᚱᚦᛁ᛫)ᚴᚱᛁᛋᛏᚾᚭ"
-# ᚠ ᚢ ᚦ ᚭ ᚱ ᚴ ᚼ ᚾ ᛁ ᛅ ᛋ ᛏ ᛒ ᛖ ᛘ ᛚ ᛦ
+
 ramsund_runestone = "ᛋᛁᚱᚦ᛬ᚴᛁᛅᚱᚦᛁ᛬ᛒᚢᚦ᛬ᚦᚭᛋᛁ᛬ᛘᚢᚦᛁᛦ᛬ᛅᛚᚱᛁᚴᛋ᛬ᛏᚢᛏᛁᛦ᛬ᚢᚱᛘᛋ᛬ᚠᚢᚱ᛬ᛋᛅᛚᚢ᛬ᚼᛅᛚᚢ᛬ᚼᚢᛚᛘᚴᛁᚱᛋ᛬ᚠᛅᚦᚢᚱ᛬ᛋᚢᚴᚱᚢᚦᛅᚱ᛬ᛒᚢᛅᛏᛅ᛬ᛋᛁᛋ"
 
 # The Ed (Boulder) Inscription from Uppland, Sweden
 # http://runes.verbix.com/vikingage/Uppland.html
-ed_inscription = "ᚱᛅᚼᚾᚢᛅᛚᛏᚱ ᛫ ᛚᛁᛏ ᛫ ᚱᛁᛋᛏᛅ ᛫ ᚱᚢᚾᛅᚱ ᛫ ᚽᚡᛦ ᛫ ᚡᛅᛋᛏᚢᛁ ᛫ ᛘᚬᚦᚢᚱ ᛫ ᛋᛁᚾᛅ ᛫ ᚬᚾᚽᛘᛋ ᛫ ᛏᚬᛏᛦ ᛫ ᛏᚬ ᛁ ᛫ ᛅᛁᚦᛁ ᛫ ᚴᚢᚦ ᚼᛁᛅᛚᛒᛁ ᛫ ᛅᚾᛏ ᛫ ᚼᚽᚾᛅ ᛫ " \
+ed_inscription = "ᚱᛅᚼᚾᚢᛅᛚᛏᚱ ᛫ ᛚᛁᛏ ᛫ ᚱᛁᛋᛏᛅ ᛫ ᚱᚢᚾᛅᚱ ᛫ ᚽᚡᛦ ᛫ ᚡᛅᛋᛏᚢᛁ ᛫ ᛘᚬᚦᚢᚱ ᛫ ᛋᛁᚾᛅ ᛫ ᚬᚾᚽᛘᛋ ᛫ ᛏᚬᛏᛦ ᛫ ᛏᚬ ᛁ ᛫ " \
+                 "ᛅᛁᚦᛁ ᛫ ᚴᚢᚦ ᚼᛁᛅᛚᛒᛁ ᛫ ᛅᚾᛏ ᛫ ᚼᚽᚾᛅ ᛫ " \
                  "§B ᚱᚢᚾᛅ ᛫ ᚱᛁᛋᛏᛅ ᛫ ᛚᛁᛏ ᛫ ᚱᛅᚼᚾᚢᛅᛚᛏᚱ ᛫ ᚼᚢᛅᚱ ᛅ × ᚵᚱᛁᚴᛚᛅᚾᛏᛁ ᛫ ᚢᛅᛋ ᛫ ᛚᛁᛋ ᛫ ᚡᚬᚱᚢᚾᚴᛁ ᛫"
 
 # https://en.wikipedia.org/wiki/Uppland_Runic_Inscription_448
 u448 = "ᚴᚢᛚ᛫ᛅᚢᚴ᛫ᛒᛁᚢᚱᚾ᛫ᛚᛁᛏᚢ᛫ᚱᛅᛁᛋᛅ᛫ᛋᛏᛅᛁᚾ᛫ᛂᚠᛏᛁᛦ᛫ᚦᚢᚱᛋᛏᛅᛁᚾ᛫ᚠᛅᚦᚢᚱ"
+
+
 # https://en.wikipedia.org/wiki/Uppland_Runic_Inscription_92
-u92 = "ᚴᚾᚢᛏᚱ ' ᛁ ᚢᛁᚴ'ᚼᚢᛋᚢᛘ ' ᛚᛁᛏ ' ᛋᛏᛅᛁᚾ ' ᚱᛁᛏᛅ ' ᚢᚴ ' ᛒᚱᚬ ' ᚴᛁᚱᛅ ᛫ ᛁᚡᛏᛁᛦ ' ᚡᛅᚦᚢᚱ ᚢᚴ ᛫ ᛘᚬᚦᚬᚱ ᛫ ᚢᚴ ᛫ ᛒᚱᚤᚦᚱ ᛫ ᛋᛁᚾᛅ ᛫ ᚢᚴ ᛫ ᛋᚢᛋᛏᚢᚱ"
+u92 = "ᚴᚾᚢᛏᚱ ' ᛁ ᚢᛁᚴ'ᚼᚢᛋᚢᛘ ' ᛚᛁᛏ ' ᛋᛏᛅᛁᚾ ' ᚱᛁᛏᛅ ' ᚢᚴ ' ᛒᚱᚬ ' ᚴᛁᚱᛅ ᛫ ᛁᚡᛏᛁᛦ ' ᚡᛅᚦᚢᚱ ᚢᚴ ᛫ ᛘᚬᚦᚬᚱ ᛫ ᚢᚴ ᛫" \
+      " ᛒᚱᚤᚦᚱ ᛫ ᛋᛁᚾᛅ ᛫ ᚢᚴ ᛫ ᛋᚢᛋᛏᚢᚱ"
 
 
 sweden_runic_inscription_filename = "sweden_runes.json"

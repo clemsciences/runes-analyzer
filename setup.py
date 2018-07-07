@@ -4,9 +4,13 @@ setup(
     name='runes-analyzer',
     version='1.0.2',
     packages=['runesanalyzer'],
-    url='',
-    license='',
+    url='https://github.com/clemsciences/runes-analyzer',
+    license='MIT',
     author='Clément Besnier',
     author_email='clemsciences@gmail.com',
-    description='Gathers different kinds of runic inscriptions'
+    description='Gathers different kinds of runic inscriptions',
+    install_requires=['requests', 'lxml'],
+    long_description='Runic alphabets: elder futhark, younger futhark, short-twig younger futhark. '
+                     'Rune representation, phonetic transcription and ',
+
 )
