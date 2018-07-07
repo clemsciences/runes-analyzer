@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name='runes-analyzer',
-    version='1.0.1',
+    version='1.0.2',
     packages=['runesanalyzer'],
     url='',
     license='',

@@ -12,6 +12,7 @@ __author__ = ["Clément Besnier <clemsciences@aol.com>", ]
 POINT = "᛫"
 SEMI_COLUMN = "\u16EC"
 
+
 class RunicAlphabetName(AutoName):
     elder_futhark = auto()
     younger_futhark = auto()
