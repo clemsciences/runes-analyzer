@@ -1,8 +1,8 @@
 from setuptools import setup
 
 setup(
-    name='runes-analyzer',
-    version='1.0.2',
+    name='runesanalyzer',
+    version='1.0.3',
     packages=['runesanalyzer'],
     url='https://github.com/clemsciences/runes-analyzer',
     license='MIT',
