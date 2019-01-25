@@ -45,6 +45,8 @@ ELDER_FUTHARK = [
     Rune(RunicAlphabetName.elder_futhark, "\u16DE", "d", "d", "dagaz"),
 ]
 
+
+# ᚠ ᚢ ᚦ ᚭ ᚱ ᚴ ᚼ ᚾ ᛁ ᛅ ᛋ ᛏ ᛒ ᛖ ᛘ ᛚ ᛦ
 YOUNGER_FUTHARK = [
     Rune(RunicAlphabetName.younger_futhark, "\u16A0", "f", "f", "fehu"),
     Rune(RunicAlphabetName.younger_futhark, "\u16A2", "u", "u", "uruz"),
@@ -68,6 +70,7 @@ YOUNGER_FUTHARK = [
 ]
 
 
+# ᚠ ᚢ ᚦ ᚭ ᚱ ᚴ ᚽ ᚿ ᛁ ᛅ ᛌ ᛐ ᛓ ᛖ ᛙ ᛚ ᛧ
 SHORT_TWIG_YOUNGER_FUTHARK = [
     Rune(RunicAlphabetName.short_twig_younger_futhark, "\u16A0", "f", "f", "fehu"),
     Rune(RunicAlphabetName.short_twig_younger_futhark, "\u16A2", "u", "u", "uruz"),
