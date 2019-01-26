@@ -22,9 +22,9 @@ def retrieve_scandinavian_runic_text_database():
 
     :return:
     """
-    # data = requests.get("http://www.runforum.nordiska.uu.se/filer/srd2014.zip")
-    # with open("data.zip", "wb") as f:
-    #     f.write(data.content)
+    data = requests.get("http://www.runforum.nordiska.uu.se/filer/srd2014.zip")
+    with open("data.zip", "wb") as f:
+        f.write(data.content)
 
     zip_ref = zipfile.ZipFile("data.zip", 'r')
     zip_ref.extractall("data_runes")
@@ -32,7 +32,12 @@ def retrieve_scandinavian_runic_text_database():
 
 
 def read_rundata():
-    return {}
+    inscrptions = []
+    with open(os.path.join("data_runes", "RUNTEXT"), "r") as f:
+        for line in f.readline():
+            l_line = line.split(" ")
+            inscrptions.append((l_line[0], l_line[1], l_line[2:]))
+    return inscrptions
 
 
 def read_fornspr():
