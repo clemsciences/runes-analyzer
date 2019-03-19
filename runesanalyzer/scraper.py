@@ -6,11 +6,13 @@ License: https://opendatacommons.org/licenses/odbl/1.0/
 loggbok: http://www.runforum.nordiska.uu.se/filer/loggbok_2008-2014.pdf
 """
 
+import os
 import time
 import json
 from lxml import html
 import requests
 import zipfile
+import codecs
 
 from runesanalyzer.data import sweden_runic_inscription_filename
 
@@ -29,15 +31,6 @@ def retrieve_scandinavian_runic_text_database():
     zip_ref = zipfile.ZipFile("data.zip", 'r')
     zip_ref.extractall("data_runes")
     zip_ref.close()
-
-
-def read_rundata():
-    inscrptions = []
-    with open(os.path.join("data_runes", "RUNTEXT"), "r") as f:
-        for line in f.readline():
-            l_line = line.split(" ")
-            inscrptions.append((l_line[0], l_line[1], l_line[2:]))
-    return inscrptions
 
 
 def read_fornspr():
@@ -95,4 +88,5 @@ def retrieve_sweden_runic_inscription():
 if __name__ == "__main__":
     # retrieve_sweden_runic_inscription()
     # sweden_runic_inscription_filename()
-    retrieve_scandinavian_runic_text_database()
+    # retrieve_scandinavian_runic_text_database()
+    print(read_rundata()[:10])
