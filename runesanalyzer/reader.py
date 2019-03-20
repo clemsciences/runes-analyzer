@@ -1,17 +1,20 @@
 
 import os
 import codecs
+import csv
+
+data_directory = "data_runes"
 
 
 def load_rundata():
-    with codecs.open(os.path.join("data_runes", "RUNTEXTX"), "r", encoding="utf-8") as f:
+    with codecs.open(os.path.join(data_directory, "RUNTEXTX"), "r", encoding="utf-8") as f:
         for line in f:
             yield line
 
 
 def read_rundata():
     inscriptions = []
-    with codecs.open(os.path.join("data_runes", "RUNTEXT"), "r", encoding="utf-8") as f:
+    with codecs.open(os.path.join(data_directory, "RUNTEXT"), "r", encoding="utf-8") as f:
         for line in f:
             # print(line)
             if line[0] != "!":
@@ -32,5 +35,27 @@ def load_urnodisk():
     print(i)
 
 
+def load_metadata():
+    with codecs.open(os.path.join(data_directory, "RUNDATA.csv"), encoding="utf-8") as f:
+        rundata_reader = csv.DictReader(f, dialect="excel-tab")
+        print(rundata_reader.fieldnames)
+        for line in rundata_reader:
+            yield line
+
+
+def get_urnordisk_inskritfter_datum():
+    signa = []
+    for line in load_metadata():
+        if line["Period/Datering"].startswith("U"):
+            signa.append(line["Signum"])
+    for line in load_rundata():
+        if line[0] != "!":
+            l_line = line.strip().split(" ")
+            if l_line[0] in signa:
+                if len(l_line) > 2:
+                    print(" ".join(l_line[3:]))
+
+
 if __name__ == "__main__":
-    load_urnodisk()
+    # load_urnodisk()
+    get_urnordisk_inskritfter_datum()
