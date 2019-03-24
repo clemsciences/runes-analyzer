@@ -3,7 +3,7 @@ import os
 import codecs
 import csv
 
-data_directory = "data_runes"
+data_directory = os.path.join(os.path.dirname(os.path.abspath(__file__)), "data_runes")
 
 
 def load_rundata():
