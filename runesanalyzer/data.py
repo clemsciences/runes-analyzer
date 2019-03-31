@@ -32,7 +32,7 @@ ELDER_FUTHARK = [
     Rune(RunicAlphabetName.elder_futhark, "\u16C3", "j", "j", "jeran"),
     Rune(RunicAlphabetName.elder_futhark, "\u16C7", "æ", "E", "eiwaz"),
     Rune(RunicAlphabetName.elder_futhark, "\u16C8", "p", "p", "peorð"),
-    Rune(RunicAlphabetName.elder_futhark, "\u16C9", "ʀ", "r", "algiz"),
+    Rune(RunicAlphabetName.elder_futhark, "\u16C9", "ʀ", "R", "algiz"),
     Rune(RunicAlphabetName.elder_futhark, "\u16CA", "s", "s", "sowilo"),
 
     Rune(RunicAlphabetName.elder_futhark, "\u16CF", "t", "t", "tiwaz"),
