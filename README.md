@@ -1,4 +1,4 @@
-[![PyPI](https://img.shields.io/pypi/v/runesanalyzer)](https://pypi.org/project/runesanalyzer/)
+[![PyPI](https://img.shields.io/pypi/v/runesanalyzer)](https://pypi.org/project/runesanalyzer/) [![Build Status](https://travis-ci.org/clemsciences/runes-analyzer.svg?branch=master)](https://travis-ci.org/clemsciences/runes-analyzer)
 
 # Runes analyzer 
 

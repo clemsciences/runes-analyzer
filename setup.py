@@ -21,7 +21,7 @@ with io.open(os.path.join(CURDIR, "README.md"), "r", encoding="utf-8") as f:
 
 setup(
     name='runesanalyzer',
-    version='1.0.4',
+    version='1.0.5',
     packages=find_packages(exclude=EXCLUDE_FROM_PACKAGES),
     include_package_data=True,
     url='https://github.com/clemsciences/runes-analyzer',
