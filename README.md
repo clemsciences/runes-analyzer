@@ -1,4 +1,4 @@
-
+[![PyPI](https://img.shields.io/pypi/v/runesanalyzer)](https://pypi.org/project/runesanalyzer/)
 
 # Runes analyzer 
 
