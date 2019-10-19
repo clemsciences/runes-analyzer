@@ -15,6 +15,7 @@ import zipfile
 import codecs
 
 from runesanalyzer.data import sweden_runic_inscription_filename
+from runesanalyzer.reader import read_rundata
 
 __author__ = ["Clément Besnier <clemsciences@aol.com>", ]
 

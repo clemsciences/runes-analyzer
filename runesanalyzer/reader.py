@@ -3,7 +3,12 @@ import os
 import codecs
 import csv
 
-data_directory = os.path.join(os.path.dirname(os.path.abspath(__file__)), "data_runes")
+from runesanalyzer import PACKDIR
+
+
+__author__ = ["Clément Besnier <clemsciences@aol.com>", ]
+
+data_directory = os.path.join(PACKDIR, "data_runes")
 
 
 def load_rundata():

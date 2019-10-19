@@ -5,7 +5,7 @@
 import unittest
 from runesanalyzer import data
 
-__author__ = ["Clément Besnier <clemsciences@aol.com>"]
+__author__ = ["Clément Besnier <clemsciences@aol.com>", ]
 
 
 class Tests(unittest.TestCase):
